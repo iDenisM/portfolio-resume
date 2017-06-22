@@ -54,8 +54,8 @@ var work = {
     {
       "employer": "Carrefour",
       "title": "worker",
-      "dates": "October 2013 - Future",
       "location": "Italy",
+      "dates": "October 2013 - Future",
       "description": "Working hard to pay the bills and online courses. Looking forward for a better job and a better life."
     },
     {
@@ -97,34 +97,36 @@ var projects = {
   		"title": "First portfolio web page",
   		"dates": 2017,
   		"description": "Create your first web page as a project for the Front-End Developer Nanodegree program. Present the project in time and make so it looks and works awesome.",
-      "image": "images/projects/portfolio.jpg"
+      "images": ["images/projects/portfolio.jpg"]
   	},
     {
   		"title": "My profile",
   		"dates": 2017,
   		"description": "Create a profile true of invented following the instructions at Udacity course",
-      "image": "images/projects/profile.jpg"
+      "images": ["images/projects/profile.jpg"]
   	},
 	]
 };
 
 // Display the projects
 projects.display = function() {
-  projects.projects.forEach(function(item) {
+  projects.projects.forEach(function(project) {
     //projects start
     $("#projects").append(HTMLprojectStart);
     //projects title
-    var formatedTitle = HTMLprojectTitle.replace("%data%", item.title);
+    var formatedTitle = HTMLprojectTitle.replace("%data%", project.title);
     $(".project-entry:last").append(formatedTitle);
     //projects dates
-    var formatedDates = HTMLprojectDates.replace("%data%", item.dates);
+    var formatedDates = HTMLprojectDates.replace("%data%", project.dates);
     $(".project-entry:last").append(formatedDates);
     //projects description
-    var formatedDescription = HTMLprojectDescription.replace("%data%", item.description);
+    var formatedDescription = HTMLprojectDescription.replace("%data%", project.description);
     $(".project-entry:last").append(formatedDescription);
     //append project image
-    var formatedImage = HTMLprojectImage.replace("%data%", item.image);
-    $(".project-entry:last").append(formatedImage);
+    project.images.forEach(function(image) {
+      var formatedImage = HTMLprojectImage.replace("%data%", image);
+      $(".project-entry:last").append(formatedImage);
+    });
   });
 };
 

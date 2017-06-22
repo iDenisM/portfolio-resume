@@ -95,13 +95,13 @@ var projects = {
 	"projects": [
   	{
   		"title": "First portfolio web page",
-  		"dates": 2017,
+  		"dates": "2017",
   		"description": "Create your first web page as a project for the Front-End Developer Nanodegree program. Present the project in time and make so it looks and works awesome.",
       "images": ["images/projects/portfolio.jpg"]
   	},
     {
   		"title": "My profile",
-  		"dates": 2017,
+  		"dates": "2017",
   		"description": "Create a profile true of invented following the instructions at Udacity course",
       "images": ["images/projects/profile.jpg"]
   	},
@@ -137,48 +137,48 @@ var education = {
 		"name": "Ion Creanga",
 		"location": "Chisinau",
 		"degree": "high school diploma",
-		"dates": 2002,
+		"dates": "2002",
 		"url": "http://ioncreanga.starnet.md/",
-    "major": "High School Degree"
+    "majors": "High School Degree - Finally"
 	},
 	{
 		"name": "USEM",
 		"location": "Chisinau",
 		"degree": "university diploma",
-		"dates": 2006,
+		"dates": "2006",
 		"url": "http://www.usem.md/",
-    "major": "Lawer in the Country"
+    "majors": "Lawer in the City"
 	}
 	],
-	"onLineCourses": [
+	"onlineCourses": [
 	{
-		"name": "Front-End Developer Nanodegree",
+		"title": "Front-End Developer Nanodegree",
 		"school": "Udacity",
-		"dates": 2017,
+		"dates": "2017",
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	},
 	{
-		"name": "CSS Cross-Country",
+		"title": "CSS Cross-Country",
 		"school": "codeschool",
-		"dates": 2017,
+		"dates": "2017",
 		"url": "https://www.codeschool.com/courses/css-cross-country"
 	},
 	{
-		"name": "Front-end Formations",
+		"title": "Front-end Formations",
 		"school": "codeschool",
-		"dates": 2017,
+		"dates": "2017",
 		"url": "https://www.codeschool.com/courses/front-end-formations"
 	},
 	{
-		"name": "Front-end Foundations",
+		"title": "Front-end Foundations",
 		"school": "codeschool",
-		"dates": 2017,
+		"dates": "2017",
 		"url": "https://www.codeschool.com/courses/front-end-foundations"
 	},
 	{
-		"name": "Try jQuery",
+		"title": "Try jQuery",
 		"school": "codeschool",
-		"dates": 2017,
+		"dates": "2017",
 		"url": "https://www.codeschool.com/courses/try-jquery"
 	}
 	]
@@ -201,13 +201,13 @@ education.display = function() {
     var formatedLocation = HTMLschoolLocation.replace("%data%", school.location);
     $(".education-entry:last").append(formatedLocation);
     //append major
-    var formatedMajor = HTMLschoolMajor.replace("%data%", school.major);
+    var formatedMajor = HTMLschoolMajor.replace("%data%", school.majors);
     $(".education-entry:last").append(formatedMajor);
   });
   $(".education-entry:last").append(HTMLonlineClasses);
-    education.onLineCourses.forEach(function(course) {
+    education.onlineCourses.forEach(function(course) {
     //append title and school
-    var formatedTitle = HTMLonlineTitle.replace("%data%", course.name).replace("#", course.url);
+    var formatedTitle = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.url);
     var formatedSchool = HTMLonlineSchool.replace("%data%", course.school);
     var formatedTitleSchool = formatedTitle + formatedSchool;
     $(".education-entry:last").append(formatedTitleSchool);

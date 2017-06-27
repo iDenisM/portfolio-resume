@@ -247,6 +247,7 @@ span {
   margin-right: 0;
 }
 
+/*mobile version*/
 @media screen and (max-width: 855px) {
   /*
   *CARDS

@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .clear-fix {
@@ -44,6 +44,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  padding: 10px 0 !important;
 }
 
 h4 {
@@ -113,7 +114,7 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -217,5 +218,42 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+}
+
+#name {
+  text-shadow: 2px 2px 2px #1199c3;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+.card__holder {
+  height: 450px;
+  margin-right: 1em;
+  width: calc((100% - 2em)/3);
+  box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+  overflow: hidden;
+}
+
+.card__holder:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 855px) {
+  /*
+  *CARDS
+  */
+  .card__holder {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1em;
   }
 }

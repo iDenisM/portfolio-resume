@@ -5,7 +5,7 @@ This is empty on purpose! Your code to build the resume will go here.
 // Bio var
 var bio = {
   "name": "Denis Mitiliuc",
-  "role": "Web Developer",
+  "role": "Padawan Front-End Developer",
   "contacts": {
     "mobile": "+393283387028",
     "email": "denis.mitiliuc@gmail.com",
@@ -100,7 +100,7 @@ var projects = {
       "images": ["images/projects/portfolio.jpg"]
   	},
     {
-  		"title": "My profile",
+  		"title": "My profile Project",
   		"dates": "2017",
   		"description": "Create a profile true of invented following the instructions at Udacity course",
       "images": ["images/projects/profile.jpg"]
@@ -110,9 +110,11 @@ var projects = {
 
 // Display the projects
 projects.display = function() {
+  //create the cards holder
+  $("#projects").append(HTMLcardStart);
   projects.projects.forEach(function(project) {
     //projects start
-    $("#projects").append(HTMLprojectStart);
+    $("#card__main").append(HTMLprojectStart);
     //projects title
     var formatedTitle = HTMLprojectTitle.replace("%data%", project.title);
     $(".project-entry:last").append(formatedTitle);
